@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x
 
 usage() {
   echo "usage: $0 <session name> <user>"
@@ -17,7 +18,7 @@ if [ ! -d  "$PAIRDIR" ] ; then
   exit 1
 fi
 
-cd $PAIDIR
+cd $PAIRDIR
 
 ln -fs "$1" "$2".pairssh
 
